@@ -1,30 +1,29 @@
 import React from "react";
-import '../css/app.scss';
+
 
 class Login extends React.Component {
-  render() {
-    return (
-      <form className="login-wrapper">
-        <div>
-          <label htmlFor="">Email</label>
-          <div>
-            <input type="text" placeholder="Email" />
-          </div>
-        </div>
-        <div>
-          <label htmlFor="">Password</label>
-          <div>
-            <input type="text" placeholder="Password" />
-          </div>
-        </div>
-        <div className="">
-            <button>
-                Login
-            </button>
-        </div>
-      </form>
-    ); // jsx Babel, Emmet
-  }
+    render() {
+        return (
+            <div className="login-wrapper">
+                <form action="" className="box login-box">
+                    <div className="field">
+                        <label className="label"></label>
+                        <div className="control">
+                            <input className="input" type="text" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div className="field">
+                        <label className="label"></label>
+                        <div className="label">
+                            <input className="input" type="text" placeholder="password" />
+                        </div>
+                    </div>
+                    <div className="control">
+                        <button className="button is-fullwidth is-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+        );
+    }
 }
-
 export default Login;
