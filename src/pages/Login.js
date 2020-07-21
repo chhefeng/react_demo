@@ -2,10 +2,20 @@ import React from "react";
 
 
 class Login extends React.Component {
+
+    handleSubmit = event => {
+        // prevent default behaviour
+        event.preventDefault();
+
+
+        // redirect to index page
+        this.props.history.push('/');
+    }
+
     render() {
-        return (
+        return ( 
             <div className="login-wrapper">
-                <form action="" className="box login-box">
+                <form action="" className="box login-box" onSubmit={this.handleSubmit}>
                     <div className="field">
                         <label className="label"></label>
                         <div className="control">

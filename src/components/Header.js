@@ -1,8 +1,32 @@
-import React from 'react';
+import React from "react";
 
-class Header extends React.Component {
+const Header = props => (
+    <div className="header">
+        <div className="grid">
+            <div className="start">
+                <a href="/">Home</a>
+            </div>
+            <div className="end">
+                {props.nickname ? (
+                    <span className="nickname">
+                        <i className="far fa-user"></i>
+                        {props.nickname}
+                    </span>
+                ) : (
+                    <React.Fragment>
+                        <a href="/">Login</a>
+                        <a href="/">Register</a>
+                    </React.Fragment>
+                )}
+            </div>
+        </div>
+    </div>
+)
 
-    renderLink() {
+
+
+/* class Header extends React.Component {
+    /* renderLink() {
         const nickname = this.props.nickname;
         if (nickname) {
             return (
@@ -17,11 +41,11 @@ class Header extends React.Component {
                     <a href="/">Login</a>
                     <a href="/">Register</a>
                 </React.Fragment>
-            )
+            );
         }
-    }
+    } */
 
-    render() {
+/*     render() {
         return (
             <div className="header">
                 <div className="grid">
@@ -29,13 +53,22 @@ class Header extends React.Component {
                         <a href="/">Home</a>
                     </div>
                     <div className="end">
-                        {this.renderLink()}
+                        {this.props.nickname ? (
+                            <span className="nickname">
+                                <i className="far fa-user"></i>
+                                {this.props.nickname}
+                            </span>
+                        ) : (
+                            <React.Fragment>
+                                <a href="/">Login</a>
+                                <a href="/">Register</a>
+                            </React.Fragment>
+                        )}
                     </div>
                 </div>
-
             </div>
         );
     }
-}
-
+} */
+ */
 export default Header;
